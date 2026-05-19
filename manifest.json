@@ -1,0 +1,11 @@
+{
+  "domain": "hikvision_audio",
+  "name": "HikVision Audio Control",
+  "version": "1.0.0",
+  "documentation": "https://github.com/yourusername/hikvision_audio",
+  "requirements": ["requests>=2.25.0"],
+  "dependencies": [],
+  "codeowners": ["@yourusername"],
+  "config_flow": true,
+  "iot_class": "local_polling"
+}
