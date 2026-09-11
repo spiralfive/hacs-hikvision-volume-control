@@ -20,7 +20,8 @@ from .const import (
     SERVICE_SET_SMART_TRACKING,
     SERVICE_GET_SMART_TRACKING,
     ATTR_SPEAKER_VOLUME,
-    ATTR_MICROPHONE_VOLUME
+    ATTR_MICROPHONE_VOLUME,
+    ATTR_CHANNEL
 )
 from .audio_controller import HikVisionAudioController
 
