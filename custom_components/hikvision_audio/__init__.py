@@ -22,7 +22,7 @@ from .const import (
     ATTR_SPEAKER_VOLUME,
     ATTR_MICROPHONE_VOLUME,
     ATTR_CHANNEL
-    
+
 )
 from .audio_controller import HikVisionAudioController
 
@@ -190,6 +190,16 @@ async def async_setup(hass: HomeAssistant, config: dict):
     )
     hass.services.async_register(
         DOMAIN, SERVICE_GET_SETTINGS, handle_get_settings
+    )
+
+    hass.services.async_register(
+        DOMAIN, SERVICE_SET_SMART_TRACKING, set_smart_tracking_handler, 
+        schema=SET_SMART_TRACKING_SCHEMA
+    )
+
+    hass.services.async_register(
+        DOMAIN, SERVICE_GET_SMART_TRACKING, set_smart_tracking_handler, 
+        schema=GET_SMART_TRACKING_SCHEMA
     )
     
     return True
