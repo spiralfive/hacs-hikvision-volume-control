@@ -2,10 +2,8 @@
 
 import logging
 import voluptuous as vol
-import homeassistant.helpers.config_validation as cv
 from homeassistant.core import HomeAssistant, ServiceCall
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_IP, CONF_USERNAME, CONF_PASSWORD, CONF_NAME
+import homeassistant.helpers.config_validation as cv
 
 from .const import (
     DOMAIN,
