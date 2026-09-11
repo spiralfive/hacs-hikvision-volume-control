@@ -1,0 +1,91 @@
+set_speaker_volume:
+  name: Set Speaker Volume
+  description: Set the speaker volume level for a HikVision camera
+  fields:
+    volume:
+      name: Volume
+      description: Volume level (0-100)
+      required: true
+      example: 80
+      selector:
+        number:
+          min: 0
+          max: 100
+          step: 1
+          unit_of_measurement: "%"
+
+set_microphone_volume:
+  name: Set Microphone Volume
+  description: Set the microphone volume level for a HikVision camera
+  fields:
+    volume:
+      name: Volume
+      description: Volume level (0-100)
+      required: true
+      example: 45
+      selector:
+        number:
+          min: 0
+          max: 100
+          step: 1
+          unit_of_measurement: "%"
+
+set_both_volumes:
+  name: Set Both Volumes
+  description: Set both speaker and microphone volume levels
+  fields:
+    speaker_volume:
+      name: Speaker Volume
+      description: Volume level for speaker (0-100)
+      required: true
+      example: 80
+      selector:
+        number:
+          min: 0
+          max: 100
+          step: 1
+          unit_of_measurement: "%"
+    microphone_volume:
+      name: Microphone Volume
+      description: Volume level for microphone (0-100)
+      required: true
+      example: 45
+      selector:
+        number:
+          min: 0
+          max: 100
+          step: 1
+          unit_of_measurement: "%"
+
+get_settings:
+  name: Get Audio Settings
+  description: Retrieve current audio settings and fire an event
+  fields: {}
+
+set_smart_tracking:
+  name: Set Smart Tracking
+  description: Enable or disable motion tracking on a Hikvision PTZ camera
+  fields:
+    enabled:
+      name: Enabled
+      description: Turn Smart Tracking on or off
+      required: true
+      example: true
+      selector:
+        boolean:
+    duration:
+      name: Duration
+      description: Tracking duration in seconds (0-300)
+      required: false
+      example: 300
+      selector:
+        number:
+          min: 0
+          max: 300
+          step: 1
+          unit_of_measurement: "s"
+
+get_smart_tracking:
+  name: Get Smart Tracking Status
+  description: Retrieve current Smart Tracking configuration and fire an event
+  fields: {}
