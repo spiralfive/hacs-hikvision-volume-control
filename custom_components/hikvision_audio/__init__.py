@@ -1,24 +1,24 @@
-"""HikVision Audio Control integration for Home Assistant."""
+"""HikVision Audio & PTZ Control integration for Home Assistant."""
 
 import logging
-from homeassistant.core import HomeAssistant, ServiceCall
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_IP, CONF_USERNAME, CONF_PASSWORD, CONF_NAME
-from homeassistant.helpers import config_validation as cv
 import voluptuous as vol
+import homeassistant.helpers.config_validation as cv
+from homeassistant.core import HomeAssistant, ServiceCall
 
 from .const import (
-    DOMAIN, 
-    CONF_CHANNEL, 
-    CONF_UPDATE_INTERVAL,
+    DOMAIN,
+    CONF_IP,
+    CONF_USERNAME,
+    CONF_PASSWORD,
+    CONF_CHANNEL,
     DEFAULT_CHANNEL,
+    DEFAULT_TRACKING_DURATION,
     SERVICE_SET_SPEAKER_VOLUME,
     SERVICE_SET_MICROPHONE_VOLUME,
     SERVICE_SET_BOTH_VOLUMES,
     SERVICE_GET_SETTINGS,
-    ATTR_SPEAKER_VOLUME,
-    ATTR_MICROPHONE_VOLUME,
-    ATTR_CHANNEL
+    SERVICE_SET_SMART_TRACKING,
+    SERVICE_GET_SMART_TRACKING,
 )
 from .audio_controller import HikVisionAudioController
 
