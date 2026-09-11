@@ -1,5 +1,4 @@
 {
   "name": "HikVision Audio & PTZ Control",
-  "render_readme": true,
-  "homeassistant": "2026.1"
+  "render_readme": true
 }
