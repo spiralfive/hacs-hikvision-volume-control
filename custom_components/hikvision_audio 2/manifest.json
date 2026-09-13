@@ -1,0 +1,10 @@
+{
+  "domain": "hikvision_audio",
+  "name": "HikVision Audio Control",
+  "version": "1.0.0",
+  "requirements": ["requests>=2.25.0"],
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "local_polling",
+  "config_flow": false
+}
